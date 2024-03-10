@@ -126,7 +126,7 @@ void bola(){
                         cout << "Hasil: " << hasil <<" cm^3\n";
                         bola(); break;
 
-                case 2: cout << "-=-=-= Menghitung Volume Bola -=-=-=\n\n";
+                case 2: cout << "-=-=-= Menghitung Luas Bola -=-=-=\n\n";
                         cout << "Input jari-jari: "; cin >> r;
 
                         hasil = 4*phi*pow(r,2);
