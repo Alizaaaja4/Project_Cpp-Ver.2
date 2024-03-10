@@ -6,15 +6,14 @@ const double phi = 3.14;
 using namespace std;
 
 void balok (){
-    int menu;
-    double p, l, t, hasil;
+    int menu; double p, l, t, hasil;
 
     cout << "\n= = = = = = = GEO-Calculate Balok = = = = = = =\n";
-    cout << "[1]. Menghitung luas permukaan\n";
-    cout << "[2]. Menghitung diagonal ruang\n";
-    cout << "[3]. Menghitung keliling balok\n";
-    cout << "[4]. Menghitung volume balok\n";
-    cout << "[5]. Kembali\n\n";
+    cout << "[1]. Menghitung luas permukaan" << endl;
+    cout << "[2]. Menghitung diagonal ruang" << endl;
+    cout << "[3]. Menghitung keliling balok" << endl;
+    cout << "[4]. Menghitung volume balok" << endl;
+    cout << "[5]. Exit\n\n";
 
     cout << "Pilih nomor menu: "; cin >> menu;
     switch (menu){
@@ -25,7 +24,7 @@ void balok (){
 
                 hasil = 2 * (p*l) + (p*t) + (l*t);
  
-                cout << "Hasil: " << hasil <<" cm\n";
+                cout << "Hasil: " << hasil <<" cm^2\n";
                 balok(); break;
         
         case 2: cout << "-=-=-= Menghitung Diagonal Ruang -=-=-=\n\n";
@@ -35,7 +34,7 @@ void balok (){
 
                 hasil = pow((p * p + l * l + t * t), 2);
 
-                cout << "Hasil: " << hasil <<" cm\n";
+                cout << "Hasil: " << hasil <<" cm^2\n";
                 balok(); break;
         
         case 3: cout << "-=-=-= Menghitung Keliling Balok -=-=-=\n\n";
@@ -45,17 +44,17 @@ void balok (){
 
                 hasil = 4*(p+l+t);
 
-                cout << "Hasil: " << hasil <<" cm\n";
+                cout << "Hasil: " << hasil <<" cm^2\n";
                 balok(); break;
 
-        case 4: cout << "-=-=-= Menghitung Volumen Balon -=-=-=\n\n";
+        case 4: cout << "-=-=-= Menghitung Volume Balon -=-=-=\n\n";
                 cout << "Input panjang: "; cin >> p;
                 cout << "Input lebar: "; cin >> l;
                 cout << "Input tinggi: "; cin >> t;
 
                 hasil = p*l*t;
 
-                cout << "Hasil: " << hasil <<" cm\n";
+                cout << "Hasil: " << hasil <<" cm^3\n";
                 balok(); break;
         
         case 5: cout << "Keluar, Terima kasih!";
@@ -64,6 +63,83 @@ void balok (){
         default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
                 balok();
     }
+}
+
+void kubus(){
+        int menu; double s, hasil;
+
+        cout << "\n= = = = = = = GEO-Calculate Kubus = = = = = = =\n";
+        cout << "[1]. Menghitung luas permukaan" << endl;
+        cout << "[2]. Menghitung volume kubus" << endl;
+        cout << "[3]. Menghitung keliling kubus" << endl;
+        cout << "[4]. Exit" << endl <<endl;
+        cout << "Pilih nomor menu: "; cin >> menu;
+
+        switch (menu){
+                case 1: cout << "-=-=-= Menghitung Luas Permukaan Kubus -=-=-=\n\n";
+                        cout << "Input panjang rusuk: "; cin >> s;
+                        
+                        hasil = 6* pow(s, 2);
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        kubus(); break;
+                
+                case 2: cout << "-=-=-= Menghitung Volume Kubus -=-=-=\n\n";
+                        cout << "Input panjang rusuk: "; cin >> s;
+
+                        hasil = pow(s, 3);
+
+                        cout << "Hasil: " << hasil <<" cm^3\n";
+                        kubus(); break;
+
+                case 3: cout << "-=-=-= Menghitung Keliling Kubus -=-=-=\n\n";
+                        cout << "Input panjang rusuk: "; cin >> s;
+
+                        hasil = 12*s;
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        kubus(); break;
+                
+                case 4: cout << "Keluar, Terima kasih!";
+                exit(0);
+
+                default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                kubus();
+        }
+}
+
+void bola(){
+        int menu; double r, hasil;
+
+        cout << "\n= = = = = = = GEO-Calculate Kubus = = = = = = =\n";
+        cout << "[1]. Volume Bola" << endl;
+        cout << "[2]. Luas Bola" << endl;
+        cout << "[3]. Exit\n\n";
+        cout << "Pilih nomor menu: "; cin >> menu;
+
+        switch (menu){
+                case 1: cout << "-=-=-= Menghitung Volume Bola -=-=-=\n\n";
+                        cout << "Input jari-jari: "; cin >> r;
+
+                        hasil = 4*phi*pow(r,3)/3;
+
+                        cout << "Hasil: " << hasil <<" cm^3\n";
+                        bola(); break;
+
+                case 2: cout << "-=-=-= Menghitung Volume Bola -=-=-=\n\n";
+                        cout << "Input jari-jari: "; cin >> r;
+
+                        hasil = 4*phi*pow(r,2);
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        bola(); break;
+                
+                case 3: cout << "Keluar, Terima kasih!";
+                        exit(0);
+
+                default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                bola();
+        }
 }
 
 int main (){
@@ -82,8 +158,8 @@ int main (){
 
     switch (menu){
         case 1: balok(); break;
-        case 2: cout << "test 2"; break;
-        case 3: cout << "test 3"; break;
+        case 2: kubus(); break;
+        case 3: bola(); break;
         case 4: cout << "test 4"; break;
         case 5: cout << "test 5"; break;
         case 6: cout << "test 6"; break;
