@@ -142,6 +142,43 @@ void bola(){
         }
 }
 
+void limas(){
+        int menu; double luas_alas, keliling_alas, tinggi_segitiga, hasil;
+
+        cout << "\n= = = = = = = GEO-Calculate Limas = = = = = = =\n";
+        cout << "[1]. Luas permukaan limas" << endl;
+        cout << "[2]. Volume limas" << endl;
+        cout << "[3]. Exit\n\n";
+        cout << "Pilih nomor menu: "; cin >> menu;
+
+        switch (menu){
+                case 1: cout << "-=-=-= Menghitung Luas Permukaan Limas -=-=-=\n\n";
+                        cout << "Input luas alas: "; cin >> luas_alas;
+                        cout << "Input keliling alas: "; cin >> keliling_alas;
+                        cout << "Input tinggi segitiga: "; cin >> tinggi_segitiga;
+
+                        hasil = (luas_alas*keliling_alas*tinggi_segitiga)/4;
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        limas(); break;
+
+                case 2: cout << "-=-=-= Menghitung Volume Limas -=-=-=\n\n";
+                        cout << "Input luas alas: "; cin >> luas_alas;
+                        cout << "Input tinggi segitiga: "; cin >> tinggi_segitiga;
+
+                        hasil = (luas_alas*tinggi_segitiga)/3;
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        limas(); break;
+
+                case 3: cout << "Keluar, Terima kasih!";
+                        exit(0);
+
+                default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                limas();
+        }
+}
+
 int main (){
     int menu;
     cout << "\n= = = = = = = GEO-Calculate = = = = = = =\n";
@@ -160,7 +197,7 @@ int main (){
         case 1: balok(); break;
         case 2: kubus(); break;
         case 3: bola(); break;
-        case 4: cout << "test 4"; break;
+        case 4: limas(); break;
         case 5: cout << "test 5"; break;
         case 6: cout << "test 6"; break;
         case 7: cout << "test 7"; break;
