@@ -8,7 +8,7 @@ GeoCalc is an application designed to assist users in performing various geometr
 
 ## Get Started ▶️
 ### Clone the Repository
-    git clone https://github.com/your-username/GeoCalc.git
+    git clone https://github.com/Alizaaaja4/Project_Cpp-Ver.2/GeoCalc.git
 
 ### Compile and Run the Program
     g++ GeoCalc.cpp -o GeoCalc
