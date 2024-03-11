@@ -179,6 +179,104 @@ void limas(){
         }
 }
 
+void prisma(){
+        int menu; double luas_alas, keliling_alas, tinggi, hasil;
+
+        cout << "\n= = = = = = = GEO-Calculate Prisma = = = = = = =\n";
+        cout << "[1]. Luas permukaan prisma" << endl;
+        cout << "[2]. Volume prisma" << endl;
+        cout << "[3]. Exit\n\n";
+        cout << "Pilih nomor menu: "; cin >> menu;
+
+        switch (menu){
+                case 1: cout << "-=-=-= Menghitung Luas Permukaan Limas -=-=-=\n\n";
+                        cout << "Input luas alas: "; cin >> luas_alas;
+                        cout << "Input keliling alas: "; cin >> keliling_alas;
+                        cout << "Input tinggi: "; cin >> tinggi;
+
+                        hasil = 2*luas_alas+(keliling_alas*tinggi);
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        prisma(); break;
+
+                case 2: cout << "-=-=-= Menghitung Volume Limas -=-=-=\n\n";
+                        cout << "Input luas alas: "; cin >> luas_alas;
+                        cout << "Input tinggi: "; cin >> tinggi;
+
+                        hasil = luas_alas * tinggi;
+
+                        cout << "Hasil: " << hasil <<" cm^3\n";
+                        prisma(); break;
+                
+                case 3: cout << "Keluar, Terima kasih!";
+                        exit(0);
+
+                default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                prisma();
+        }
+}
+
+void tabung(){
+        int menu; double hasil, r, t;
+
+        cout << "\n= = = = = = = GEO-Calculate Tabung = = = = = = =\n";
+        cout << "[1]. Luas permukaan tabung" << endl;
+        cout << "[2]. Volume tabung" << endl;
+        cout << "[3]. Exit\n\n";
+        cout << "Pilih nomor menu: "; cin >> menu;
+
+        switch(menu){
+                case 1: cout << "-=-=-= Menghitung Luas Permukaan Tabung -=-=-=\n\n";
+                        cout << "Input jari-jari: "; cin >> r;
+
+                        hasil = 2*phi*pow(r,2);
+
+                        cout << "Hasil: " << hasil <<" cm^2\n";
+                        tabung(); break;
+                
+                case 2: cout << "-=-=-= Menghitung Volume Tabung -=-=-=\n\n";
+                        cout << "Input jari-jari: "; cin >> r;
+                        cout << "Input tinggi "; cin >> t;
+
+                        hasil = phi*t*pow(r,2);
+
+                        cout << "Hasil: " << hasil <<" cm^3\n";
+                        tabung(); break;
+                
+                case 3: cout << "Keluar, Terima kasih!";
+                        exit(0);
+
+                default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                tabung();
+        }
+}
+
+void kerucut(){
+        int menu; double r, t, hasil;
+
+        cout << "\n= = = = = = = GEO-Calculate Kerucut = = = = = = =\n";
+        cout << "[1]. Volume kerucut" << endl;
+        cout << "[2]. Exit\n\n";
+        cout << "Pilih nomor menu: "; cin >> menu;
+
+        switch (menu){
+                case 1: cout << "-=-=-= Menghitung Volume Kerucut -=-=-=\n\n";
+                        cout << "Input jari-jari: "; cin >> r;
+                        cout << "Input tinggi "; cin >> t;
+
+                        hasil = phi*t*pow(r,2);
+
+                        cout << "Hasil: " << hasil <<" cm^3\n";
+                        kerucut(); break;
+                
+                case 2: cout << "Keluar, Terima kasih!";
+                        exit(0);
+
+                default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                kerucut();
+        }
+}
+
 int main (){
     int menu;
     cout << "\n= = = = = = = GEO-Calculate = = = = = = =\n";
@@ -198,10 +296,11 @@ int main (){
         case 2: kubus(); break;
         case 3: bola(); break;
         case 4: limas(); break;
-        case 5: cout << "test 5"; break;
-        case 6: cout << "test 6"; break;
-        case 7: cout << "test 7"; break;
-        default: cout << "test 8"; break;
+        case 5: prisma(); break;
+        case 6: tabung(); break;
+        case 7: kerucut(); break;
+        default: cout << "Maaf option yang anda masukan tidak tersedia!!" << endl;
+                main();
     }
 
     return 0;
